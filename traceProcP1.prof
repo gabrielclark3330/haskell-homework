@@ -1,0 +1,47 @@
+	Mon Apr 11 01:09 2022 Time and Allocation Profiling Report  (Final)
+
+	   traceProcP1 +RTS -p -RTS spice.din spice.dout
+
+	total time  =        7.55 secs   (7550 ticks @ 1000 us, 1 processor)
+	total alloc = 8,033,143,992 bytes  (excludes profiling overheads)
+
+COST CENTRE       MODULE    SRC                            %time %alloc
+
+hexToDec          Main      traceProcP1.hs:(25,1)-(26,74)   71.8   56.6
+main.sortedDecArr Main      traceProcP1.hs:50:6-31          11.6   16.7
+main.hexStrings   Main      traceProcP1.hs:46:6-56          10.6   16.5
+mapHexToDec       Main      traceProcP1.hs:(7,1)-(22,20)     1.7    0.0
+main              Main      traceProcP1.hs:(37,1)-(60,12)    1.7    4.7
+main.grouped      Main      traceProcP1.hs:52:6-33           0.9    1.6
+hexToDecH         Main      traceProcP1.hs:27:1-40           0.7    2.2
+main.decArr       Main      traceProcP1.hs:48:6-38           0.5    1.1
+
+
+                                                                                             individual      inherited
+COST CENTRE         MODULE                  SRC                           no.     entries  %time %alloc   %time %alloc
+
+MAIN                MAIN                    <built-in>                    119          0    0.0    0.0   100.0  100.0
+ CAF                Main                    <entire-module>               237          0    0.0    0.0     0.0    0.0
+  main              Main                    traceProcP1.hs:(37,1)-(60,12) 238          1    0.0    0.0     0.0    0.0
+ CAF                GHC.Conc.Signal         <entire-module>               228          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.Encoding         <entire-module>               217          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.Encoding.Iconv   <entire-module>               215          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.Exception        <entire-module>               209          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.Handle.FD        <entire-module>               207          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.Handle.Internals <entire-module>               206          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.Handle.Text      <entire-module>               205          0    0.0    0.0     0.0    0.0
+ CAF                System.Posix.Internals  <entire-module>               175          0    0.0    0.0     0.0    0.0
+ CAF                GHC.IO.FD               <entire-module>               143          0    0.0    0.0     0.0    0.0
+ main               Main                    traceProcP1.hs:(37,1)-(60,12) 239          0    1.7    4.7   100.0  100.0
+  cutList           Main                    traceProcP1.hs:(30,1)-(33,14) 242      15321    0.3    0.5     0.3    0.5
+  main.counts       Main                    traceProcP1.hs:54:6-55        243          1    0.0    0.0     0.1    0.0
+   main.counts.\    Main                    traceProcP1.hs:54:27-46       251      15320    0.1    0.0     0.1    0.0
+  main.decArr       Main                    traceProcP1.hs:48:6-38        246          1    0.5    1.1    74.8   60.0
+   hexToDecH        Main                    traceProcP1.hs:27:1-40        248    1000001    0.7    2.2    74.3   58.9
+    hexToDec        Main                    traceProcP1.hs:(25,1)-(26,74) 249    6434480   71.8   56.6    73.6   56.6
+     mapHexToDec    Main                    traceProcP1.hs:(7,1)-(22,20)  250    6434480    1.7    0.0     1.7    0.0
+  main.grouped      Main                    traceProcP1.hs:52:6-33        244          1    0.9    1.6     0.9    1.6
+  main.hexStrings   Main                    traceProcP1.hs:46:6-56        247          1   10.6   16.5    10.6   16.5
+  main.inFile       Main                    traceProcP1.hs:39:6-21        240          1    0.0    0.0     0.0    0.0
+  main.outFile      Main                    traceProcP1.hs:40:6-22        241          1    0.0    0.0     0.0    0.0
+  main.sortedDecArr Main                    traceProcP1.hs:50:6-31        245          1   11.6   16.7    11.6   16.7
